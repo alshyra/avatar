@@ -13,28 +13,20 @@
 
 
 <script>
-import AvatarService from "../AvatarService.js";
 import UsersStore from "../UsersStore.js";
 
 export default {
   name: "Employes",
   store: UsersStore,
-  data: () => {
-    return {
-      users: []
-    };
-  },
   computed: {
     isUserSelected: () => {
       if (UsersStore.getters.getUser()) {
         return UsersStore.getters.getUser().id.value;
       }
+    },
+    users() {
+      return UsersStore.getters.getUsers();
     }
-  },
-  created() {
-    AvatarService.getUsers().then(users => {
-      this.users = users;
-    });
   },
   methods: {
     selectUser(user) {

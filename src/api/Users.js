@@ -1,7 +1,7 @@
 import axios from "axios";
-import EnvStore from "./EnvStore";
+import EnvStore from "../EnvStore";
 
-class AvatarService {
+class UsersService {
   constructor() {
     this.rootUrl = EnvStore.rootUrl();
   }
@@ -20,5 +20,5 @@ class AvatarService {
   }
 }
 
-const avatarService = new AvatarService();
-export default avatarService;
+const usersService = new UsersService();
+export default usersService;

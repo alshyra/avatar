@@ -25,7 +25,7 @@
                 <span class="label no-icon">City:</span>
                 {{user.location.city}} {{user.location.postcode}}            
             </div>
-             <div>
+                <div>
                 <span class="label  no-icon">Street:</span>
                 {{user.location.street}}
             </div>

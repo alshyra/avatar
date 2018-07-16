@@ -19,12 +19,17 @@
 <script>
 import DetailedEmploye from "./components/DetailedEmploye.vue";
 import Employes from "./components/Employes.vue";
+import UsersStore from "./UsersStore";
 
 export default {
   name: "app",
+  store: UsersStore,
   components: {
     DetailedEmploye,
     Employes
+  },
+  created() {
+    UsersStore.dispatch("getUsers");
   }
 };
 </script>

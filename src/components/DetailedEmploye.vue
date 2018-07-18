@@ -39,8 +39,8 @@
 .label {
   font-weight: 600;
 }
-.label.no-icon{
-    margin-left: 20px;
+.label.no-icon {
+  margin-left: 20px;
 }
 .user-detail {
   text-transform: capitalize;
@@ -61,6 +61,14 @@ import UsersStore from "../UsersStore.js";
 export default {
   name: "DetailedEmploye",
   store: UsersStore,
+  data() {
+      return {
+          testMessage: "test"
+      }
+  },
+  created() {
+    this.testMessage = "aze";
+  },
   computed: {
     user() {
       return UsersStore.getters.getUser();
